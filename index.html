@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+     <title>Temperature Converter</title>
+
+     <!-- Bootstrap CDN -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-4">
+          <h2>Temperature Converter</h2>
+            
+            <label for="tempInput" class="">Enter a temperature and select the measurement to convert to:</label>
+            <input type="text" class="" id="tempInput" placeholder="Temperature"><br>
+        <!-- </div> -->
+
+        <!-- <div> -->
+            <label for="fahrenheitBtn">Fahrenheit</label>
+            <input type="radio" class="" id="fahrenheitBtn" name="selector" value="Fahrenheit">
+          
+            <label for="celciusBtn">Celcius</label>
+            <input type="radio" class="" id="celciusBtn" name="selector" value="Celcius">
+       <!--  </div> -->
+
+          <div><br>
+              <button type="button" class="btn btn-primary" id="convertBtn">Convert</button>
+              <button type="button" class="btn btn-primary" id="clearBtn">Clear</button>
+          </div>
+
+        <!-- Div below closes class col-md-4 -->
+        </div> 
+        <!-- Div below closes class row -->
+      </div>
+    <!-- Div below closes container -->
+    </div>
+
+
+
+
+
+
+
+  <!-- SCRIPTS -->
+
+  <script src="converter.js"></script>
+</body>
+</html>
