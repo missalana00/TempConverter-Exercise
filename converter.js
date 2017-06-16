@@ -14,9 +14,7 @@ var clearBtn = document.getElementById("clearButton");
 
 var resulth3 = document.getElementById("resultsAppear");
 
-var userInput;
 
-var result;
 
 
 ///////////////////////
@@ -27,23 +25,44 @@ var result;
 
 var whichScale = function () {
 
+  userInput = inputBox.value;
+
   if (fahrRadio.checked) {
 
       console.log("Fahrenheit is selected.");
 
-      return true;
+      convertToFahrenheit(userInput);
   }
 
   else {
 
     console.log("Celsius is selected");
 
-    return false;
+    convertToCelcius();
   }
 };
 
 
-// 2. Function to convert userInput from Fahrenheit to Celcius
+// 2. Function to convert userInput from Celcius to Fahrenheit
+
+var convertToFahrenheit = function (x) {
+
+  console.log(x);
+
+  x = x * 1.8 + 32;
+
+  console.log(x);
+
+};
+
+
+
+
+
+
+
+
+
 // 3. Function to convert userInput from Celcius to Fahrrenheit
 // 4. Function to change color of result output to h3 element depending on value of result (if/else if/else) 
 // 5. Function that, when user clicks "Enter" in input field, fires the conversion function
