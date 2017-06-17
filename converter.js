@@ -26,7 +26,7 @@ var resulth3 = document.getElementById("resultsAppear");
 
 var whichScale = function () {
 
-  userInput = inputBox.value;
+  var userInput = inputBox.value;
 
   if (fahrRadio.checked) {
 
@@ -56,8 +56,6 @@ var convertToFahrenheit = function (x) {
 
   resulth3.innerHTML = x;
 
-
-
 };
 
 // 3. Function to convert userInput from Celcius to Fahrrenheit
@@ -68,19 +66,23 @@ var convertToCelsius = function (xy) {
 
   console.log(xy);
 
+  resulth3.innerHTML = xy;
+
 };
-
-
-
-
-
-
-
 
 
 // 4. Function to change color of result output to h3 element depending on value of result (if/else if/else) 
 // 5. Function that, when user clicks "Enter" in input field, fires the conversion function
-// 6. Function to clear input field when user clicks "Clear" button
+
+
+var clearInputBox = function () {
+
+  console.log("You clicked clear, my dear.")
+
+  inputBox.value = "";
+
+};
+
 
 
 //////////////////////
@@ -89,3 +91,7 @@ var convertToCelsius = function (xy) {
 
 // Add an event listener to the "convert" button; when clicked, the whichScale function is called
 convertBtn.addEventListener("click", whichScale);
+
+// 6. Function to clear input field when user clicks "Clear" button
+// Add an event listener to the "clear" button; when clicked, the clearInputBox is called
+clearBtn.addEventListener("click", clearInputBox);
