@@ -38,7 +38,7 @@ var whichScale = function () {
 
     console.log("Celsius is selected");
 
-    convertToCelcius();
+    convertToCelsius(userInput);
   }
 };
 
@@ -55,6 +55,13 @@ var convertToFahrenheit = function (x) {
 
 };
 
+var convertToCelsius = function (xy) {
+
+  xy = (xy - 32) * (5/9);
+
+  console.log(xy);
+
+};
 
 
 
