@@ -54,6 +54,8 @@ var convertToFahrenheit = function (x) {
 
   resulth3.innerHTML = x;
 
+  colorFahrenheit();
+
 };
 
 
@@ -67,23 +69,50 @@ var convertToCelsius = function (xy) {
 
   resulth3.innerHTML = xy;
 
+  colorCelsius();
+
 };
 
 
 // 4. Function to change color of result output to h3 element depending on value of result (if/else if/else) 
 
+var colorFahrenheit = function (userInput) {
+
+  // if (fahrRadio.hasAttribute("checked")) {
+
+    if (userInput > 90) {
+
+        resulth3.style.color = 'red';
+
+    } else if (userInput < 32) {
+
+        resulth3.style.color = 'blue';
+
+    } else {
+
+        resulth3.style.color = 'green';
+    }
+  // }
+};
 
 
+var colorCelsius = function (userInput) {
 
+    if (userInput > 32) {
 
+        resulth3.style.color = 'red';
 
+    } else if (userInput < 0) {
 
+        resulth3.style.color = 'blue';
 
+    } else {
 
-
+        resulth3.style.color = 'green';
+    }
+};
 
 // 6. Function to clear input field when user clicks "Clear" button
-
 
 var clearInputBox = function () {
 
@@ -105,11 +134,11 @@ convertBtn.addEventListener("click", whichScale);
 // 5. Function that, when user clicks "Enter" in input field, fires the conversion function
 inputBox.addEventListener("keydown", function (e) {
   
-  console.log("e",e);
+  // console.log("e",e);
 
   if (e.keyCode === 13) {
 
-    console.log("e",e);
+    // console.log("e",e);
      
      whichScale();
 
